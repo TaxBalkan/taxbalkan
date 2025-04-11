@@ -1,3 +1,4 @@
+import SectionCards from "@/components/SectionCards";
 import Head from 'next/head';
 import Image from 'next/image';
 import { FileText, Users, Home as HomeIcon, Briefcase } from 'lucide-react';
@@ -43,23 +44,7 @@ export default function Home() {
         </div>
       </main>
 
-      <section className="bg-white py-12 px-4">
-        <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-          {[
-            [<FileText size={48} color="#a4161a" />, 'Steuer / Porez'],
-            [<Users size={48} color="#2e2e2e" />, 'Familie & Unterstützung / Porodica i podrška'],
-            [<HomeIcon size={48} color="#2e2e2e" />, 'Wohnen / Stanovanje'],
-            [<Briefcase size={48} color="#2e2e2e" />, 'Arbeit / Posao'],
-          ].map(([IconComponent, label]) => (
-            <div key={label} className="bg-gray-50 rounded-lg py-6 shadow-md">
-              <div className="mb-4 flex justify-center">
-                {IconComponent}
-              </div>
-              <p className="font-semibold text-sm">{label}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+      <SectionCards />
 
       <footer className="bg-white border-t py-6 text-center text-sm text-gray-500">
         © {new Date().getFullYear()} TaxBalkan
