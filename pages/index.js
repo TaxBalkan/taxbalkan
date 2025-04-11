@@ -53,7 +53,7 @@ export default function Home() {
       </section>
 
       <footer className="bg-white border-t py-6 text-center text-sm text-gray-500">
-        © {new Date().getFullYear()} TaxBalkan – info@taxbalkan.de
+        © {new Date().getFullYear()} TaxBalkan – taxbalkan@gmail.com
       </footer>
     </>
   );
