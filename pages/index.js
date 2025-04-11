@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import { FileText, Users, Home as HomeIcon, Briefcase } from 'lucide-react';
 
 export default function Home() {
   return (
@@ -32,7 +33,6 @@ export default function Home() {
       <main className="bg-[#0f172a] text-white py-16 px-4 text-center">
         <h2 className="text-4xl md:text-5xl font-extrabold leading-tight mb-4">
           Praktične upute i savjeti za osobe sa Balkana
-          <br />
         </h2>
         <p className="text-gray-300 max-w-2xl mx-auto mb-8">
           Hilfe beim Ausfüllen von Formularen und Anträgen
@@ -46,13 +46,14 @@ export default function Home() {
       <section className="bg-white py-12 px-4">
         <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           {[
-            ['icon-euro.svg', 'Steuer / Porez'],
-            ['icon-family.svg', 'Familie & Unterstützung / Porodica i podrška'],
-            ['icon-home.svg', 'Wohnen / Stanovanje'],
-          ].map(([icon, label]) => (
+            [<FileText size={48} color="#a4161a" />, 'Steuer / Porez'],
+            [<Users size={48} color="#2e2e2e" />, 'Familie & Unterstützung / Porodica i podrška'],
+            [<HomeIcon size={48} color="#2e2e2e" />, 'Wohnen / Stanovanje'],
+            [<Briefcase size={48} color="#2e2e2e" />, 'Arbeit / Posao'],
+          ].map(([IconComponent, label]) => (
             <div key={label} className="bg-gray-50 rounded-lg py-6 shadow-md">
               <div className="mb-4 flex justify-center">
-                <img src={`/public/${icon}`} alt={label} className="w-12 h-12" />
+                {IconComponent}
               </div>
               <p className="font-semibold text-sm">{label}</p>
             </div>
@@ -66,3 +67,4 @@ export default function Home() {
     </>
   );
 }
+
