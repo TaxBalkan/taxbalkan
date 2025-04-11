@@ -24,10 +24,11 @@ export default function Home() {
 
       <main className="bg-[#0f172a] text-white py-16 px-4 text-center">
         <h2 className="text-4xl md:text-5xl font-extrabold leading-tight mb-4">
-          Hilfe beim Ausfüllen von Formularen und Anträgen<br /> in Deutschland
+          Praktične upute i savjeti za osobe sa Balkana
+          <br /> in Deutschland
         </h2>
         <p className="text-gray-300 max-w-2xl mx-auto mb-8">
-          Praktične upute i savjeti za osobe sa Balkana u Njemačkoj
+          Hilfe beim Ausfüllen von Formularen und Anträgen
         </p>
         <div className="flex justify-center space-x-4">
           <button className="bg-red-700 hover:bg-red-800 text-white py-2 px-6 rounded-md">Erfahre mehr</button>
