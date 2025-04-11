@@ -25,7 +25,7 @@ export default function Home() {
       <main className="bg-[#0f172a] text-white py-16 px-4 text-center">
         <h2 className="text-4xl md:text-5xl font-extrabold leading-tight mb-4">
           Praktične upute i savjeti za osobe sa Balkana
-          <br /> in Deutschland
+          <br /> 
         </h2>
         <p className="text-gray-300 max-w-2xl mx-auto mb-8">
           Hilfe beim Ausfüllen von Formularen und Anträgen
