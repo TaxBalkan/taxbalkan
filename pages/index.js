@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -7,12 +8,19 @@ export default function Home() {
         <title>TaxBalkan - Vodiči i prijave</title>
         <meta name="description" content="Praktične upute i savjeti za obrasce u Njemačkoj" />
       </Head>
+
       <header className="bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-          <h1 className="text-2xl font-bold">
-            <span className="text-red-700">Tax</span>
-            <span className="text-gray-800">Balkan</span>
-          </h1>
+          <a href="/">
+            <Image
+              src="/taxbalkan-logo.png"
+              alt="TaxBalkan logo"
+              width={180}
+              height={50}
+              priority
+            />
+          </a>
+
           <nav className="space-x-4 text-sm text-gray-600">
             <a href="#" className="hover:text-red-700">Blog</a>
             <a href="#" className="hover:text-red-700">Downloads</a>
@@ -21,6 +29,15 @@ export default function Home() {
           </nav>
         </div>
       </header>
+
+      <main className="p-6 text-center">
+        <h2 className="text-3xl font-bold mb-4">Dobrodošli na <span className="text-red-700">Tax</span><span className="text-gray-800">Balkan</span>!</h2>
+        <p className="text-gray-600">Praktične upute i vodiči za obrasce, prijave i prava u Njemačkoj za ljude s Balkana.</p>
+      </main>
+    </>
+  );
+}
+
 
       <main className="bg-[#0f172a] text-white py-16 px-4 text-center">
         <h2 className="text-4xl md:text-5xl font-extrabold leading-tight mb-4">
@@ -38,17 +55,19 @@ export default function Home() {
 
       <section className="bg-white py-12 px-4">
         <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-          {[
-            ['€', 'Steuer / Porez'],
-            ['👨‍👩‍👧', 'Familie & Unterstützung / Porodica i podrška'],
-            ['🏠', 'Wohnen / Stanovanje'],
-            ['💼', 'Arbeitssuche / Traženje posla']
-          ].map(([icon, label]) => (
-            <div key={label} className="bg-gray-50 rounded-lg py-6 shadow-md">
-              <div className="text-3xl mb-2">{icon}</div>
-              <p className="font-semibold text-sm">{label}</p>
-            </div>
-          ))}
+         {[
+  ['icon-euro.svg', 'Steuer / Porez'],
+  ['icon-family.svg', 'Familie & Unterstützung / Porodica i podrška'],
+  ['icon-home.svg', 'Wohnen / Stanovanje'],
+].map(([icon, label]) => (
+  <div key={label} className="bg-gray-50 rounded-lg py-6 shadow-md">
+    <div className="mb-4 flex justify-center">
+      <img src={`/icons/${icon}`} alt={label} className="w-12 h-12" />
+    </div>
+    <p className="font-semibold text-sm">{label}</p>
+  </div>
+))}
+
         </div>
       </section>
 
