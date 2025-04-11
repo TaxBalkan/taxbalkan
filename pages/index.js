@@ -1,4 +1,4 @@
-import SectionCards from "@/components/SectionCards";
+import SectionCards from "../components/SectionCards";
 import Head from 'next/head';
 import Image from 'next/image';
 import { FileText, Users, Home as HomeIcon, Briefcase } from 'lucide-react';
